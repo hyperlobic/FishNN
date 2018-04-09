@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <FSharpCoreImplicitPackageVersion>4.3.*</FSharpCoreImplicitPackageVersion>
+    <RuntimeFrameworkVersion>2.0.6</RuntimeFrameworkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\FishNN\FishNN.fsproj" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CostTests.fs" />
+    <Compile Include="NeuralTests.fs" />
+    <Compile Include="ActivationTests.fs" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

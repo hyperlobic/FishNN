@@ -64,7 +64,7 @@ printfn "inputs = %d, outputs = %d, batches = %d, samples = %d" numInputs numOut
 
 let initialNetwork = initNetwork [numInputs; 50; 50; numOutputs] Relu.relu Relu.reluDerivative Sigmoid.sigmoid Sigmoid.sigmoidDerivative
 let cost = CrossEntropyCosts.crossEntropy
-let learn = Backpropagation.train learningRate CrossEntropyCosts.dCrossEntropy
+let learn = Backpropagation.train learningRate CrossEntropyCosts.crossEntropyDerivative
 
 let mutable network = initialNetwork
 

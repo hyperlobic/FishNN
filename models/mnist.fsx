@@ -32,7 +32,7 @@ let initInputs (data : float array array) =
     x / 255.
 
 let trainingSet miniBatchSize =
-    let labels, data = read <| Path.Combine(dataFolder, "mnist_train.csv")
+    let labels, data = Path.Combine(dataFolder, "mnist_train.csv") |> read
     
     let labelBatches = 
         labels 
@@ -47,7 +47,8 @@ let trainingSet miniBatchSize =
     dataBatches, labelBatches
 
 let testingSet () =
-    read <| Path.Combine(dataFolder, "mnist_test.csv")
+    Path.Combine(dataFolder, "mnist_test.csv")
+    |> read
     |> (fun (labels, data) -> (initInputs data, initTargets labels))
 
 

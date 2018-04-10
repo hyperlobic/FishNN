@@ -8,7 +8,7 @@ open FishNN.Activations
 let maxError = 0.00001
 
 [<Fact>]
-let ``sigmoid should calculate sigmoid matrix activations for a matrix`` () =
+let ``sigmoid should calculate sigmoid activations for a matrix`` () =
     let m = matrix [[1.; 2.]; [3.; 4.]]
     
     let s = Sigmoid.sigmoid m

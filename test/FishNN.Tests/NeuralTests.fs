@@ -32,7 +32,7 @@ let ``initLayer should create valid parameter sizes`` () =
     layer.bias.Count |> should equal 4
 
 [<Fact>]
-let ``linearForwardProp should calculate linear portion of layer output`` =
+let ``linearForwardProp should calculate linear portion of layer output`` () =
     let weights = matrix [[1.; 2.]; [3.; 4.]]
     let layer = {
         weights = weights

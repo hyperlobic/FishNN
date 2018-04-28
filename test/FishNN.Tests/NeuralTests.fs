@@ -44,7 +44,7 @@ let ``linearForwardProp should calculate linear portion of layer output`` () =
     let inputs = matrix [[3.; 10.]; [5.; -3.]]
     let linearOut = linearForwardProp inputs layer
 
-    linearOut.ColumnCount |> should equal 1
+    linearOut.ColumnCount |> should equal 2
     linearOut.RowCount |> should equal 2
 
     linearOut.[0,0] |> should equal 13.
